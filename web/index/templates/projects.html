@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %} Porfolio MJMike {% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+                <div class="text-center">
+                    <h2 class="fw-bolder">Projects</h2>
+                    <p class="lead fw-normal text-muted mb-5">A collection of projects showcasing my work.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Project details go here -->
+        {% for project in projects %}
+        <div>
+            <h2>{{ project.title }}</h2>
+            <p>{{ project.description }}</p>
+            <a href="{{ project.link }}">Voir le projet</a>
+            <img src="{{ project.image.url }}" alt="{{ project.title }}">
+            <a href="{{ project.source_code }}">Voir le code source</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

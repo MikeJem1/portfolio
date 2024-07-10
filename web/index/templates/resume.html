@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Porfolio MJMike {% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+                <div class="text-center">
+                    <h2 class="fw-bolder">Resume</h2>
+                    <a href="{% static 'doc/cv.pdf' %}" class="btn btn-primary" download>Télécharger mon CV</a>
+                </div>
+            </div>
+        </div>
+        <!-- Resume content goes here -->
+    </div>
+</section>
+{% endblock %}
